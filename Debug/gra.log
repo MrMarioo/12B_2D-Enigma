@@ -1,7 +1,0 @@
-﻿  Źródło.cpp
-MSVCRTD.lib(exe_main.obj) : error LNK2019: nierozpoznany symbol zewnętrzny _main przywołany w funkcji "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-D:\studia\studia\semestr 5\proj_graf\lab1\Project1\SFML-2.5.1\lib\sfml-system-d.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x64” z typem maszyny docelowej „x86”
-D:\studia\studia\semestr 5\proj_graf\lab1\Project1\SFML-2.5.1\lib\sfml-window-d.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x64” z typem maszyny docelowej „x86”
-D:\studia\studia\semestr 5\proj_graf\lab1\Project1\SFML-2.5.1\lib\sfml-graphics-d.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x64” z typem maszyny docelowej „x86”
-D:\studia\studia\semestr 5\proj_graf\lab1\Project1\SFML-2.5.1\lib\sfml-main-d.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x64” z typem maszyny docelowej „x86”
-D:\studia\studia\semestr 5\proj_graf\gra\Debug\gra.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 1
