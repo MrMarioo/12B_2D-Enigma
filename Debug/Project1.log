@@ -1,0 +1,13 @@
+﻿  Engine.cpp
+  Hero.cpp
+  main.cpp
+  Generowanie kodu...
+Engine.obj : error LNK2019: nierozpoznany symbol zewnętrzny "__declspec(dllimport) public: __thiscall sf::RenderWindow::RenderWindow(void)" (__imp_??0RenderWindow@sf@@QAE@XZ) przywołany w funkcji "void __cdecl `dynamic initializer for 'window''(void)" (??__Ewindow@@YAXXZ)
+main.obj : error LNK2001: nierozpoznany symbol zewnętrzny "__declspec(dllimport) public: __thiscall sf::RenderWindow::RenderWindow(void)" (__imp_??0RenderWindow@sf@@QAE@XZ)
+Engine.obj : error LNK2019: nierozpoznany symbol zewnętrzny "__declspec(dllimport) public: virtual __thiscall sf::RenderWindow::~RenderWindow(void)" (__imp_??1RenderWindow@sf@@UAE@XZ) przywołany w funkcji "void __cdecl `dynamic atexit destructor for 'window''(void)" (??__Fwindow@@YAXXZ)
+main.obj : error LNK2001: nierozpoznany symbol zewnętrzny "__declspec(dllimport) public: virtual __thiscall sf::RenderWindow::~RenderWindow(void)" (__imp_??1RenderWindow@sf@@UAE@XZ)
+D:\studia\studia\semestr 5\SFML-2.5.1\lib\sfml-system-d.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x64” z typem maszyny docelowej „x86”
+D:\studia\studia\semestr 5\SFML-2.5.1\lib\sfml-window-d.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x64” z typem maszyny docelowej „x86”
+D:\studia\studia\semestr 5\SFML-2.5.1\lib\sfml-graphics-d.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x64” z typem maszyny docelowej „x86”
+D:\studia\studia\semestr 5\SFML-2.5.1\lib\sfml-main-d.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x64” z typem maszyny docelowej „x86”
+D:\studia\studia\semestr 5\proj_graf\projgraf\projgraf\Project1\Debug\Project1.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 2
