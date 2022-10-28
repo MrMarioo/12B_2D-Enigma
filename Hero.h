@@ -13,13 +13,15 @@ public:
 	RectangleShape shape;
 	int width;
 	int height;
-	double x;
-	double y;
-	double movespeed;
-	double fallspeed;
-	char direction;
+	float x=0;
+	float y=0;
+	float movespeed;
+	float fallspeed;
+	char direction[4] = { 0,0,0,0 };
 	bool falling;
+	bool jumping;
 	bool moving;
+	bool crouching;
 	void init();
 	RectangleShape draw();
 	void input();
@@ -28,6 +30,7 @@ public:
 	void shoot();
 	void move();
 	void fall();
-
+	void crouch();
+	double getbottom();
 };
 
