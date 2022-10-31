@@ -11,10 +11,11 @@ class Hero
 {
 public:
 	RectangleShape shape;
+
 	int width;
 	int height;
-	float x=0;
-	float y=0;
+	float x = 0, y = 0;
+	float xtemp, ytemp;
 	float movespeed;
 	float fallspeed;
 	char direction[4] = { 0,0,0,0 };
@@ -22,15 +23,16 @@ public:
 	bool jumping;
 	bool moving;
 	bool crouching;
+	bool shooting;
 	void init();
-	RectangleShape draw();
+	void draw(RenderWindow& window);
 	void input();
-	void update();
+	void update(RenderWindow& window);
 	void die();
-	void shoot();
+	void shoot(RenderWindow& window);
 	void move();
 	void fall();
 	void crouch();
-	double getbottom();
+	float getbottom();
 };
 

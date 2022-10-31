@@ -7,11 +7,12 @@
 using namespace std;
 using namespace sf;
 
-static RenderWindow window;
+
 
 class Engine
 {
 public:
+	RenderWindow window;
 	RectangleShape heroShape;
 	Hero hero;
 	Clock clock;
@@ -28,14 +29,13 @@ public:
 	void update()
 	{
 		//update commands
-		hero.update();
+		hero.update(window);
 	}
 
 	void draw()
 	{
 		window.clear(Color::Black);
-		heroShape = hero.draw();
-		window.draw(heroShape);
+		hero.draw(window);
 		window.display();
 	}
 
