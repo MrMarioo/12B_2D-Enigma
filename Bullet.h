@@ -7,19 +7,24 @@
 using namespace std;
 using namespace sf;
 
+#define BULLET_WIDTH 5.f;
+#define BULLET_HEIGHT 2.f;
+
 class Bullet
 {
 public:
-	int destPoint;
-	float x, y;
-	float xtemp, ytemp;
-	float angle;
-	float size = 5.f;
-	float speed = 5.f;
-	Vector2f vec;
+	Bullet(int x, int y, int xdest, int ydest);
 	RectangleShape shape;
-	void init(float x, float y);
-	void draw();
+	Vector2i destPoint;
+	Vector2f shiftVec = Vector2f(0,0);
+	float x = 0.f, y = 0.f;
+	float xtemp = 0.f, ytemp = 0.f;
+	float xVelocity = 0.f, yVelocity = 0.f;
+	float angle = 0.f;
+	float width = BULLET_WIDTH;
+	float height = BULLET_HEIGHT;
+	float speed = 5.f;
+	void draw(RenderWindow& window);
 	void update();
 	void checkCollision();
 	void calcVector();

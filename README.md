@@ -5,7 +5,6 @@ Skończone:
   -poruszanie
   -skok
   -kucanie
-  -strzał(pobranie pozycji myszy)
+  -strzał
   -input/draw/update
-W trakcie prac:
--Bullet
+  -klasa Bullet

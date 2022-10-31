@@ -39,6 +39,8 @@ void Hero::init()
 void Hero::draw(RenderWindow& window)
 {
 	window.draw(shape);
+	for (int i = 0; i < bulletVec.size(); i++)
+		bulletVec.at(i).draw(window);
 }
 
 void Hero::input()
@@ -59,6 +61,8 @@ void Hero::update(RenderWindow &window)
 	fall();
 	shoot(window);
 	shape.setPosition(x, y);
+	for (int i = 0; i < bulletVec.size(); i++)
+		bulletVec.at(i).update();
 }
 
 void Hero::move()
@@ -156,7 +160,11 @@ void Hero::shoot(RenderWindow& window)
 		{
 			nextshoot = 0;
 			Vector2i mouseCoord = Mouse::getPosition(window);
-			cout << "x: " << mouseCoord.x << " y: " << mouseCoord.y << endl;
+			Bullet newBullet(this->x, this->y, mouseCoord.x, mouseCoord.y);
+			//cout << "x: " << mouseCoord.x << " y: " << mouseCoord.y << endl;
+			if (bulletVec.size() > 5)
+				bulletVec.erase(bulletVec.begin());
+			bulletVec.push_back(newBullet);
 			thread th3(shoothread, 3);
 			th3.detach();
 		}

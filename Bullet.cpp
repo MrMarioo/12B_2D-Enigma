@@ -1,29 +1,42 @@
 #include "Bullet.h"
 #include <iostream>
+#include <cmath>
 #include <SFML/Graphics.hpp>
-/*#include <SFML/Audio.hpp>
+#include <SFML/Audio.hpp>
 
-void Bullet::init(float x, float y)
+using namespace std;
+using namespace sf;
+
+Bullet::Bullet(int x, int y, int xdest, int ydest)
 {
+	this->x = x;
+	this->y = y;
 	shape.setPosition(Vector2f(x, y));
-	shape.setSize(Vector2f(size,size*2));
+	shape.setSize(Vector2f(width,height));
+	shape.setFillColor(Color::Cyan);
+	destPoint.x = xdest;
+	destPoint.y = ydest;
+	calcVector();
 }
-void Bullet::draw()
+void Bullet::draw(RenderWindow &window)
 {
-
+	window.draw(shape);
 }
 void Bullet::calcVector()
 {
-	angle = Math.atan2(destPoint.getX() - x, destPoint.getY() - y);
-	xVelocity = ((speed)*Math.sin(1 * angle));
-	yVelocity = ((speed)*Math.cos(-1 * angle));
-	setVector(xVelocity, yVelocity);
+	angle = atan2(destPoint.x - x, destPoint.y - y);
+	xVelocity = ((speed)*sin(1 * angle));
+	yVelocity = ((speed)*cos(-1 * angle));
+	shiftVec.x = xVelocity;
+	shiftVec.y = yVelocity;
 }
 void Bullet::update()
 {
-
+	x += shiftVec.x;
+	y += shiftVec.y;
+	shape.setPosition(x, y);
 }
 void Bullet::checkCollision()
 {
 
-}*/
+}

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include "Bullet.h"
 
 
 using namespace std;
@@ -11,7 +12,7 @@ class Hero
 {
 public:
 	RectangleShape shape;
-
+	vector<Bullet> bulletVec;
 	int width;
 	int height;
 	float x = 0, y = 0;
