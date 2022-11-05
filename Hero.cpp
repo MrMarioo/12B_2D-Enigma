@@ -9,8 +9,8 @@
 using namespace std;
 using namespace sf;
 
-#define HERO_WIDTH 50.f;
-#define HERO_HEIGHT 100.f;
+#define HERO_WIDTH 20.f;
+#define HERO_HEIGHT 30.f;
 #define HERO_SPEED 5;
 #define HERO_FALL_SPEED 5;
 
@@ -139,12 +139,6 @@ void Hero::crouch()
 
 }
 
-float Hero::getbottom()
-{
-	float ret = y + height;
-	return ret;
-}
-
 void shoothread(int id)
 {
 	this_thread::sleep_for(chrono::milliseconds(100));
@@ -162,7 +156,7 @@ void Hero::shoot(RenderWindow& window)
 			Vector2i mouseCoord = Mouse::getPosition(window);
 			Bullet newBullet(this->x, this->y, mouseCoord.x, mouseCoord.y);
 			//cout << "x: " << mouseCoord.x << " y: " << mouseCoord.y << endl;
-			if (bulletVec.size() > 5)
+			if (bulletVec.size() > 50)
 				bulletVec.erase(bulletVec.begin());
 			bulletVec.push_back(newBullet);
 			thread th3(shoothread, 3);
@@ -171,3 +165,23 @@ void Hero::shoot(RenderWindow& window)
 	}
 }
 
+float Hero::getbottom()
+{
+	float ret = y + height;
+	return ret;
+}
+float Hero::gettop()
+{
+	float ret = y;
+	return ret;
+}
+float Hero::getleft()
+{
+	float ret = x;
+	return ret;
+}
+float Hero::getright()
+{
+	float ret = x + width;
+	return ret;
+}

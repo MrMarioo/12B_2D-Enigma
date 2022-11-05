@@ -25,6 +25,13 @@ void Bullet::draw(RenderWindow &window)
 void Bullet::calcVector()
 {
 	angle = atan2(destPoint.x - x, destPoint.y - y);
+	if (abs(angle) > 2.2 || abs(angle) < 0.8)
+	{
+		float buff = width;
+		width = height;
+		height = buff;
+		shape.setSize(Vector2f(width, height));
+	}
 	xVelocity = ((speed)*sin(1 * angle));
 	yVelocity = ((speed)*cos(-1 * angle));
 	shiftVec.x = xVelocity;

@@ -35,5 +35,8 @@ public:
 	void fall();
 	void crouch();
 	float getbottom();
+	float gettop();
+	float getleft();
+	float getright();
 };
 
